@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intermediatestationapp.intermediatestationapp.InputScreen">
+
+    <TextView
+        android:id="@+id/InputBox5"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="入力欄5"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="235dp" />
+
+    <TextView
+        android:id="@+id/InputBox4"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="入力欄4"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <TextView
+        android:id="@+id/InputBox3"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="入力欄3"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <TextView
+        android:id="@+id/InputBox2"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="入力欄2"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <TextView
+        android:id="@+id/InputBox1"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="入力欄1"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical" />
+
+    <Button
+        android:id="@+id/PlusInputBoxButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <Button
+        android:id="@+id/SerchButton"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="検　索"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="301dp" />
+
+    <Button
+        android:id="@+id/SettingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="設定"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <Button
+        android:id="@+id/ClearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="クリア"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="400dp" />
+</android.support.constraint.ConstraintLayout>
