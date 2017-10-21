@@ -4,39 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.intermediatestationapp.intermediatestationapp.InputScreen">
+    tools:context="com.intermediatestationapp.intermediatestationapp.InputScreen"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <EditText
         android:id="@+id/inputBox5"
         android:layout_width="170dp"
         android:layout_height="40dp"
+        android:layout_above="@+id/inputBox4"
         android:text="入力欄5"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="235dp" />
+        tools:layout_editor_absoluteY="224dp"
+        tools:layout_editor_absoluteX="95dp" />
 
     <EditText
         android:id="@+id/inputBox4"
         android:layout_width="170dp"
         android:layout_height="40dp"
+        android:lyauot_above="@+id/inputBox3"
         android:text="入力欄4"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="181dp" />
+        tools:layout_editor_absoluteY="176dp"
+        tools:layout_editor_absoluteX="95dp" />
 
     <EditText
         android:id="@+id/inputBox3"
         android:layout_width="170dp"
         android:layout_height="40dp"
         android:text="入力欄3"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="132dp" />
+        tools:layout_editor_absoluteY="128dp"
+        tools:layout_editor_absoluteX="95dp" />
 
     <EditText
         android:id="@+id/inputBox2"
         android:layout_width="170dp"
         android:layout_height="40dp"
         android:text="入力欄2"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="78dp" />
+        tools:layout_editor_absoluteY="80dp"
+        tools:layout_editor_absoluteX="95dp" />
 
     <EditText
         android:id="@+id/inputBox1"
@@ -44,42 +48,48 @@
         android:layout_height="40dp"
         android:text="入力欄1"
         tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="28dp" />
+        tools:layout_editor_absoluteY="32dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="20dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
 
     <Button
         android:id="@+id/plusInputBoxButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="28dp" />
+        android:text="+"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+        android:onClick="onClick"
         android:text="検　索"
         tools:layout_editor_absoluteX="95dp"
         tools:layout_editor_absoluteY="301dp" />
 
     <Button
         android:id="@+id/settingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:onClick="onClick"
         android:text="設定"
         tools:layout_editor_absoluteX="218dp"
         tools:layout_editor_absoluteY="400dp" />
 
     <Button
         android:id="@+id/clearButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:onClick="onClick"
         android:text="クリア"
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="400dp" />
