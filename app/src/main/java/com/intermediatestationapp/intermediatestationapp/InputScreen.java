@@ -26,7 +26,7 @@ public class InputScreen extends AppCompatActivity {
 
 
     /**
-     * 初期処理
+     * コンストラクタ
      *
      * @param savedInstanceState
      */
