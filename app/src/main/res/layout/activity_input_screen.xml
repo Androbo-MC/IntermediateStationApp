@@ -12,43 +12,60 @@
         android:id="@+id/inputBox5"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/inputBox4"
-        android:text="入力欄5"
-        tools:layout_editor_absoluteY="224dp"
-        tools:layout_editor_absoluteX="95dp" />
+        android:layout_below ="@+id/inputBox4"
+        android:text=""
+        android:layout_marginBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
         android:id="@+id/inputBox4"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:lyauot_above="@+id/inputBox3"
-        android:text="入力欄4"
-        tools:layout_editor_absoluteY="176dp"
-        tools:layout_editor_absoluteX="95dp" />
+        android:layout_below="@+id/inputBox3"
+        android:text=""
+        tools:layout_editor_absoluteX="95dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputBox5"
+        app:layout_constraintLeft_toLeftOf="@+id/inputBox3"
+        app:layout_constraintRight_toRightOf="@+id/inputBox3"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <EditText
         android:id="@+id/inputBox3"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:text="入力欄3"
-        tools:layout_editor_absoluteY="128dp"
-        tools:layout_editor_absoluteX="95dp" />
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/inputBox4"
+        app:layout_constraintLeft_toLeftOf="@+id/inputBox2"
+        app:layout_constraintRight_toRightOf="@+id/inputBox2"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="15dp" />
 
     <EditText
         android:id="@+id/inputBox2"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:text="入力欄2"
-        tools:layout_editor_absoluteY="80dp"
-        tools:layout_editor_absoluteX="95dp" />
+        android:text=""
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputBox3"
+        app:layout_constraintLeft_toLeftOf="@+id/inputBox1"
+        app:layout_constraintRight_toRightOf="@+id/inputBox1"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <EditText
         android:id="@+id/inputBox1"
         android:layout_width="170dp"
         android:layout_height="40dp"
-        android:text="入力欄1"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="32dp" />
+        android:layout_marginBottom="15dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/inputBox2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="0.423"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -60,37 +77,36 @@
         tools:layout_editor_absoluteX="20dp" />
 
     <Button
-        android:id="@+id/plusInputBoxButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:text="+"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <Button
         android:id="@+id/searchButton"
         android:layout_width="170dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="150dp"
         android:onClick="onClick"
         android:text="検　索"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="301dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/settingButton"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:onClick="onClick"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="65dp"
+        android:onClick="SettingButtonOnClick"
         android:text="設定"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/clearButton"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:onClick="onClick"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="65dp"
+        android:layout_marginRight="91dp"
+        android:onClick="ClearButtonOnClick"
         android:text="クリア"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/settingButton" />
 </android.support.constraint.ConstraintLayout>
