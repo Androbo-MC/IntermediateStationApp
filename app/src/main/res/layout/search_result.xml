@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
     android:orientation="vertical">
 
-    <TextView
+    <TextView android:id="@+id/android:empty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/list_view_row"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:textColor="#111" />
+        android:textSize="20sp" android:text="検索結果"
+        tools:layout_editor_absoluteY="218dp"
+        tools:layout_editor_absoluteX="132dp">
+    </TextView>
 
     <Button
         android:id="@+id/aroundButton"
@@ -20,8 +21,10 @@
         android:layout_height="48dp"
         android:onClick="onClick"
         android:text="周辺"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="447dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/routeButton"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/routeButton" />
 
     <Button
         android:id="@+id/routeButton"
@@ -29,8 +32,10 @@
         android:layout_height="48dp"
         android:onClick="onClick"
         android:text="ルート"
-        tools:layout_editor_absoluteX="192dp"
-        tools:layout_editor_absoluteY="447dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/shareButton"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/shareButton" />
 
     <Button
         android:id="@+id/shareButton"
@@ -38,8 +43,11 @@
         android:layout_height="48dp"
         android:onClick="onClick"
         android:text="共有"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="447dp" />
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/optionButton" />
 
     <Button
         android:id="@+id/optionButton"
@@ -47,7 +55,10 @@
         android:layout_height="48dp"
         android:onClick="onClick"
         android:text="候補"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="447dp" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shareButton"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
