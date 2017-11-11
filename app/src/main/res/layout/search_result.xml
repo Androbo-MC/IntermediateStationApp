@@ -15,7 +15,7 @@
         android:textColor="#111" />
 
     <Button
-        android:id="@+id/settingButton"
+        android:id="@+id/aroundButton"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:onClick="onClick"
@@ -24,7 +24,7 @@
         tools:layout_editor_absoluteY="447dp" />
 
     <Button
-        android:id="@+id/clearButton"
+        android:id="@+id/routeButton"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:onClick="onClick"
@@ -33,7 +33,7 @@
         tools:layout_editor_absoluteY="447dp" />
 
     <Button
-        android:id="@+id/clearButton"
+        android:id="@+id/shareButton"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:onClick="onClick"
@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="447dp" />
 
     <Button
-        android:id="@+id/clearButton"
+        android:id="@+id/optionButton"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:onClick="onClick"
