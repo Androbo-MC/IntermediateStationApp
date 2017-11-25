@@ -23,7 +23,7 @@
         android:id="@+id/search_result_kana"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor=":android:color/black"
+        android:textColor="@android:color/black"
         android:textSize="12sp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/search_result"
