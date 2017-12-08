@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.intermediatestationapp.intermediatestationapp.models.StationDetailVO;
 import com.intermediatestationapp.intermediatestationapp.models.StationVO;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class StationDAO {
     }
 
     // 文字列と部分一致する駅名と仮名を取得するメソッド
-    public ArrayList<StationVO> selectNameByStr(String str) {
+    public ArrayList<StationVO> selectNamesByStr(String str) {
 
         // 結果返却用リスト
         ArrayList<StationVO> stationList = new ArrayList<>();
@@ -42,17 +43,17 @@ public class StationDAO {
             stationList.add(new StationVO(cursor.getString(cursor.getColumnIndex("name")),
                     cursor.getString(cursor.getColumnIndex("kana"))));
         }
-        // 使用済みカーソルはクローズする
+        // 使用済カーソルはクローズする
         cursor.close();
-        // 結果値を格納したリストを返却
+        // 結果値を返却
         return stationList;
     }
 
     // 駅名から駅情報を取得するメソッド
-    public StationVO selectStationByName(String name) {
+    public StationDetailVO selectStationByName(String name) {
 
         // 結果返却用VO
-        StationVO vo = null;
+        StationDetailVO vo = null;
         // DBから駅情報を取得
         Cursor cursor = db.rawQuery("SELECT kana, pref_cd, lat, lng, gnavi_id, jorudan_name FROM station WHERE name = ?",
                 new String[]{name});
@@ -66,7 +67,7 @@ public class StationDAO {
             String gnaviId = cursor.getString(cursor.getColumnIndex("gnavi_id"));
             String jorudanName = cursor.getString(cursor.getColumnIndex("jorudan_name"));
             // DBから取得した値を格納したVOを生成
-            vo = new StationVO(name, kana, prefCd, lat, lng, gnaviId, jorudanName);
+            vo = new StationDetailVO(name, kana, prefCd, lat, lng, gnaviId, jorudanName);
         }
         // 使用済カーソルはクローズする
         cursor.close();
@@ -75,10 +76,10 @@ public class StationDAO {
     }
 
     // 全ての駅情報を取得するメソッド
-    public ArrayList<StationVO> selectAllStations() {
+    public ArrayList<StationDetailVO> selectAllStations() {
 
         // 結果返却用リスト
-        ArrayList<StationVO> stationList = new ArrayList<>();
+        ArrayList<StationDetailVO> stationList = new ArrayList<>();
         // DBから全情報を取得
         Cursor cursor = db.rawQuery("SELECT name, kana, pref_cd, lat, lng, gnavi_id, jorudan_name FROM station", null);
 
@@ -92,7 +93,7 @@ public class StationDAO {
             String gnaviId = cursor.getString(cursor.getColumnIndex("gnavi_id"));
             String jorudanName = cursor.getString(cursor.getColumnIndex("jorudan_name"));
             // DBから取得した値を格納したVOを生成
-            StationVO vo = new StationVO(name, kana, prefCd, lat, lng, gnaviId, jorudanName);
+            StationDetailVO vo = new StationDetailVO(name, kana, prefCd, lat, lng, gnaviId, jorudanName);
             // VOをリストに格納
             stationList.add(vo);
         }
