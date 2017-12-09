@@ -29,7 +29,6 @@
             android:value="AIzaSyAYszxdlHW65YAntT0J8-MB6Pue0gP0Z2U" />
 
         <activity android:name=".SuggestedStation" />
-        <activity android:name=".Links" />
         <activity android:name=".Settings"></activity>
     </application>
 
