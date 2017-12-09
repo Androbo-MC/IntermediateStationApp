@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.intermediatestationapp.intermediatestationapp.AreaInformation;
-import com.intermediatestationapp.intermediatestationapp.InputScreen;
+import com.intermediatestationapp.intermediatestationapp.Input;
 import com.intermediatestationapp.intermediatestationapp.SearchResult;
 import com.intermediatestationapp.intermediatestationapp.models.StationVO;
 
@@ -25,7 +25,7 @@ public class IntentUtil {
     public static Intent prepareForInputScreen(Context context) {
 
         // メイン画面には何も送らないでそのまま返却
-        return new Intent(context, InputScreen.class);
+        return new Intent(context, Input.class);
     }
 
     /**
