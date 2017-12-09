@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intermediatestationapp.intermediatestationapp.ComButton">
+
+    <Button
+        android:id="@+id/BtnCandided"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:onClick="btnCandidedOnClick"
+        android:text="候補"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BtnArea"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BtnArea"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:onClick="btnAreaOnClick"
+        android:text="周辺"
+        app:layout_constraintEnd_toStartOf="@+id/BtnLinks"
+        app:layout_constraintStart_toEndOf="@+id/BtnCandided"
+        app:layout_constraintTop_toTopOf="@+id/BtnCandided" />
+
+    <Button
+        android:id="@+id/BtnLinks"
+        android:layout_width="65dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:onClick="btnLinksOnClick"
+        android:text="共有"
+        app:layout_constraintEnd_toStartOf="@+id/BtnRoute"
+        app:layout_constraintStart_toEndOf="@+id/BtnArea"
+        app:layout_constraintTop_toTopOf="@+id/BtnArea" />
+
+    <Button
+        android:id="@+id/BtnRoute"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:onClick="btnRouteOnClick"
+        android:text="経路"
+        app:layout_constraintEnd_toStartOf="@+id/BtnGenre"
+        app:layout_constraintStart_toEndOf="@+id/BtnLinks"
+        app:layout_constraintTop_toTopOf="@+id/BtnLinks" />
+
+    <Button
+        android:id="@+id/BtnGenre"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:onClick="btnGenreOnClick"
+        android:text="ジャンル"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BtnRoute"
+        app:layout_constraintTop_toTopOf="@+id/BtnRoute" />
+
+</android.support.constraint.ConstraintLayout>
