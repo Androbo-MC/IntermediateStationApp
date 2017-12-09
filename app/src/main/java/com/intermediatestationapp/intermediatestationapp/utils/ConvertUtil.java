@@ -1,8 +1,8 @@
 package com.intermediatestationapp.intermediatestationapp.utils;
 
 /**
- * 計算共通クラス
+ * 文字列変換共通クラス
  */
 
-public class CalculateUtil {
+public class ConvertUtil {
 }
