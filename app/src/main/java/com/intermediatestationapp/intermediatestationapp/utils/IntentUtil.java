@@ -22,7 +22,7 @@ public class IntentUtil {
      * @param context コンテキスト(実行中ActivityのthisでOK)
      * @return Intent 画面遷移に必要な情報を保持したIntent
      */
-    public static Intent prepareForInputScreen(Context context) {
+    public static Intent prepareForInput(Context context) {
 
         // メイン画面には何も送らないでそのまま返却
         return new Intent(context, Input.class);
